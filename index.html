@@ -63,11 +63,11 @@
       <p><a href="https://www.moillusions.com/perspective-chair-optical-illusion/"><img alt="To the left, a wooden chair in an empty room. To the right, a chair that appears fragmented and disjointed." class="preview" src='index/b677ebe71610af5411a20f3239d2567b.jpg'></a></p>
       <p><i>Image from <a href="https://www.moillusions.com/perspective-chair-optical-illusion/">Mighty Optical Illusions</a></i></p>
       <br>
-      <p>A sighted user may see a website’s content like the chair to the left—complete and properly arranged. But a screen reader may parse the actually HTML of the website like the photo to the left—broken and unusable. As we know, usability should not be a matter of perspective. The chair should be a chair from any viewpoint. </p>
+      <p>A sighted user may see a website’s content like the chair to the left—complete and properly arranged. But a screen reader may parse the actual HTML of the website like the photo to the left—broken and unusable. As we know, usability should not be a matter of perspective. The chair should be a chair from any viewpoint. </p>
       <br>
       <p>HTML is a tree of nested nodes—called tags—with semantically-significant tag names. If nodes are not properly labelled or grouped together, assistive technologies such as <b>screen readers</b> may struggle to present your site’s content in a meaningful way. A screen reader is an assistive technology that reads and describes the content displayed on a computer, phone, or other device. </p>
       <br>
-      <p>View the below the snippet of HTML. The section HTML tag represents a section of a site, the <code class='code-inline'>&lt;h3&gt;</code> HTML tag represents a heading, and the <code class='code-inline'>&lt;p&gt;</code> tag represents a paragraph.  So if your site needed an "Introduction" heading and a paragraph of introductory text, you could represent it as the following:</p>
+      <p>View the below snippet of HTML. The section HTML tag represents a section of a site, the <code class='code-inline'>&lt;h3&gt;</code> HTML tag represents a heading, and the <code class='code-inline'>&lt;p&gt;</code> tag represents a paragraph.  So if your site needed an "Introduction" heading and a paragraph of introductory text, you could represent it as the following:</p>
       <br>
       <code class='code-multiline'><pre>&lt;section class="intro-section"&gt;
   &lt;h1&gt;Introduction&lt;/h1&gt;
@@ -78,7 +78,7 @@
         <h3>Introduction</h1>
         <p>Welcome to my website!</p>
       </section><br>
-      Because the <code class='code-inline'>&lt;h3&gt;</code> and <code class='code-inline'>&lt;p&gt;</code> tags are semantically significant HTML tags, screen readers can actually communicate to the user that the "Introduction" text is a heading, and the "Welcome to my website!" paragraph is secondary text. And with the section tag, we know that these items are grouped together.
+      Because the <code class='code-inline'>&lt;h3&gt;</code> and <code class='code-inline'>&lt;p&gt;</code> tags are semantically significant HTML tags, screen readers can actually communicate to the user that the "Introduction" text is a heading, and the "Welcome to my website!" paragraph is secondary text. And with the <code class='code-inline'>&lt;section&gt;</code> tag, we know that these items are grouped together.
       Moving items outside of particular sections will create confusion, though, even if the appearance is the same. See the following example and preview:<br><br>
       <pre><code class='code-multiline'>&lt;section class="intro-section"&gt;
   &lt;h3&gt;Introduction&lt;/h3&gt;
@@ -173,7 +173,7 @@
       <p>Assistive technologies cannot interpret CSS styling. A screen reader will interpret these two values as "ten-dot-ninety-nine" and "five-point-nine-nine," which hardly conveys their actual meaning. </p>
       <br>
       <blockquote>
-        <p><i>A pseudo-element is an element that exists only from a visual standpoint on the page. It’s not actually inserted into HTML document. The<code class='code-inline'>:before</code> selector, in particular, visually appends a child node before the actual HTML children of a particular element. The <code class='code-inline'>:after</code> selector does the same after the HTML children of a particular element.</i></p>
+        <p><i>A pseudo-element is an element that exists only from a visual standpoint on the page. It’s not actually inserted into the HTML document. The<code class='code-inline'>:before</code> selector, in particular, visually appends a child node before the actual HTML children of a particular element. The <code class='code-inline'>:after</code> selector does the same after the HTML children of a particular element.</i></p>
       </blockquote>
       <br>
       <h3 id="aesthetics">Don’t Sacrifice Aesthetics</h3>
@@ -194,7 +194,7 @@
       <br>
       You may notice, however, that this is not the most aesthetically appealing way to communicate a discounted price. The strikethrough paired with the red text was certainly more attention-grabbing. 
       CSS must not replace meaningful content on the page, but it can still be used to enhance the communication of information. You can still achieve a pleasing design while maintaining accessibility. 
-      <br><br><p>Many years ago, a popular CSS and Javascript library called <a href="https://getbootstrap.com/">Bootstrap</a> introduced a CSS class called  <code class='code-inline'>.sr-only</code>, or screen reader only This class can be added to any HTML element to render it invisible to the human eye but fully readable to screen readers. The CSS for this class is as follows:</p>
+      <br><br><p>Many years ago, a popular CSS and Javascript library called <a href="https://getbootstrap.com/">Bootstrap</a> introduced a CSS class called  <code class='code-inline'>.sr-only</code>, or screen reader only. This class can be added to any HTML element to render it invisible to the human eye but fully readable to screen readers. The CSS for this class is as follows:</p>
       <br>
       <pre><code class='code-multiline'>.sr-only {
   position: absolute;
@@ -256,11 +256,11 @@
       </ul>
       <br>
       <ul>
-        <li><span>The dollar signs have been integrated into the actual HTML document<span></li>
+        <li><span>The dollar signs have been integrated into the actual HTML document.<span></li>
       </ul>
       <br>
       <ul>
-        <li><span>We used visual styling to <b>enhance</b> the meaning of the prices<span></li>
+        <li><span>We used visual styling to <b>enhance</b> the meaning of the prices.<span></li>
       </ul>
       <br>
       <p>Though we can’t see all the text, a screen reader will read this document as "Old Price: ten dollars and ninety-nine cents. New Price: five dollars and ninety nine cents." The visual appearance and textual content are both reasonable and meaningful.</p>
@@ -284,9 +284,9 @@
       <br>
       <p>The <code class='code-inline'>alt</code> attribute works as follows:</p>
       <br>
-      <pre><code class='code-multiline'>&lt;img src="https://cdn.pixabay.com/photo/2019/09/24/06/54/dog-4500444_960_720.jpg" alt="A dark brown hound sits with its back to the camera, gazing sadly over its shoulder at the viewer. The hound is outside, sitting between a patch of tall grass and dirt path." /&gt;</code></pre>
+      <pre><code class='code-multiline'>&lt;img src="https://cdn.pixabay.com/photo/2019/09/24/06/54/dog-4500444_960_720.jpg" alt="A dark brown hound sits with its back to the camera, gazing sadly over its shoulder at the viewer. The hound is outside, sitting between a patch of tall grass and a dirt path." /&gt;</code></pre>
       <p><br></p>
-      <img class="preview" src="https://cdn.pixabay.com/photo/2019/09/24/06/54/dog-4500444_960_720.jpg" alt="A dark brown hound sits with its back to the camera, gazing sadly over its shoulder at the viewer. The hound is outside, sitting between a patch of tall grass and dirt path." />
+      <img class="preview" src="https://cdn.pixabay.com/photo/2019/09/24/06/54/dog-4500444_960_720.jpg" alt="A dark brown hound sits with its back to the camera, gazing sadly over its shoulder at the viewer. The hound is outside, sitting between a patch of tall grass and a dirt path." />
       <br>
       <br>
       <p>Note that the description is much more specific than simply writing "dog." A picture is worth a thousand words, or so the saying goes. Do your best to describe as much of the image of as possible. </p>
@@ -296,7 +296,7 @@
       <br>
       <p>But like images, icons are visual elements. There are accessibility considerations to make whenever you add an icon to your site. </p>
       <br>
-      <p>If your icons are typical image files (.png, .jpeg, .jpg, .gif, etc), they can placed inside an <code class='code-inline'>&lt;img&gt;</code> tag with a descriptive <code class='code-inline'>alt</code> attribute.</p>
+      <p>If your icons are typical image files (.png, .jpeg, .jpg, .gif, etc), they can be placed inside an <code class='code-inline'>&lt;img&gt;</code> tag with a descriptive <code class='code-inline'>alt</code> attribute.</p>
       <br>
       <p>Icon <i>fonts</i> such as <a href="https://fontawesome.com/">FontAwesome</a>, however, present a new challenge. Icon fonts treat the icons as typographical glyphs, rather than images. This means that the icon can be sized, inserted, and colored the same way you would size, insert, and recolor the letter "A", or an exclamation point. </p>
       <br>
@@ -319,13 +319,11 @@
       <p>The appearance is completely unchanged, but the meaning of the icon is now detectable to screen readers. </p>
       <br>
       <h3 id="accessible-multimedia">Closed Captioning Provided By…</h3>
-      <p>Abilities and disabilities are varied. Some users may not be able to be hear content on your site. Other users may be sensitive to flashing lights in video and .gif files. Some users  may need a keyboard, rather than a mouse, to play audio and video. </p>
+      <p>Abilities and disabilities are varied. Some users may not be able to hear content on your site. Other users may be sensitive to flashing lights in video and .gif files. Some users  may need a keyboard, rather than a mouse, to play audio and video. </p>
       <br>
       <p>If using audio and video, both the <code class='code-inline'>&lt;audio&gt;</code> and <code class='code-inline'>&lt;video&gt;</code> tags accept a <code class='code-inline'>track</code> attribute. The <code class='code-inline'>track</code> attribute specifies a subtitle track for the sound in the audio/video element. With subtitles, users who are hard of hearing can still understand and enjoy the content you are trying to share. </p>
       <br>
-      <p>You must also allow users to control the audio/video using their keyboard. To do this, you may add the <code class='code-inline'>controls</code> attribute to the audio/video. This specifies that the browser should determine the keyboard controls for these multimedia files. This can be tricky, though, as some browsers may have different keyboard controls, or may not support keyboard controls at all. </p>
-      <br>
-      <p>Unfortunately, if you wish to have consistent, custom controls, you must implement them yourself through Javascript. </p>
+      <p>You must also allow users to control the audio/video using their keyboard. To do this, you may add the <code class='code-inline'>controls</code> attribute to the audio/video. This specifies that the browser should determine the keyboard controls for these multimedia files. This can be tricky, though, as some browsers may have different keyboard controls, or may not support keyboard controls at all. Unfortunately, if you wish to have consistent, custom controls, you must implement them yourself through Javascript. </p>
       <br>
       <p>Fair warning, the process for attaching a caption track and implementing custom button controls for HTML audio/video can be rather involved. If you're interested, <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">here is a guide on subtitling provided by the Mozilla Web Docs</a>. However, it may be easier to simply upload your content to YouTube (or some other popular video provider), and then embed the YouTube video in your HTML. This is easier for several reasons:</p>
       <br>
@@ -339,7 +337,7 @@
       <br>
       </section><section class="note-section"><h2 id="interactive-elements">Interactive Elements</h2>
       <h3 id="accessible-forms">Forming Forms</h3>
-      <p>Many websites require users to input information. This information could be a username and password, credit card information, addresses and more. A common way to input information are HTML <b>forms</b>.  Forms usually consist of an input where user can type or click to indicate a value of some sort, and an accompanying label  to indicate the purpose of that form. A properly developed form can be easily interpreted by screen readers:</p>
+      <p>Many websites require users to input information. This information could be usernames, passwords, credit card information, addresses and more. A common way to input information are HTML <b>forms</b>.  Forms usually consist of an input where a user can type or click to indicate a value of some sort, and an accompanying label  to indicate the purpose of that form. A properly developed form can be easily interpreted by screen readers:</p>
       <br>
       <pre><code class='code-multiline'>&lt;form&gt;
   &lt;label for="address"&gt;Address:&lt;/label&gt;
@@ -360,7 +358,7 @@
         <li><span>The <code class='code-inline'>&lt;input&gt;</code> tag must include an <code class='code-inline'>id</code> attribute. The <code class='code-inline'>form</code> attribute on the <code class='code-inline'>&lt;label&gt;</code> should point to the input’s <code class='code-inline'>id</code>. This will indicate to screen readers that a relationship exists between the label and the input. <span></li>
       </ul>
       <br>
-      <p>Other forms require a bit more configuration to be accessible. Checkboxes, for example, should be grouped together in <code class='code-inline'>&lt;fieldset&gt;</code> with a <code class='code-inline'>&lt;legend&gt;</code> . This will indicate to screen readers that the checkboxes are answering the question presented by the <code class='code-inline'>&lt;legend&gt;</code>. </p>
+      <p>Other forms require a bit more configuration to be accessible. Checkboxes, for example, should be grouped together in a <code class='code-inline'>&lt;fieldset&gt;</code> with a <code class='code-inline'>&lt;legend&gt;</code> . This will indicate to screen readers that the checkboxes are answering the question presented by the <code class='code-inline'>&lt;legend&gt;</code>. </p>
       <br>
       <pre><code class='code-multiline'>&lt;fieldset&gt;
   &lt;legend&gt;Favorite Colors:&lt;/legend&gt;
@@ -418,7 +416,7 @@
       <br>
       <p>Imagine if a user was relying exclusively on keyboard controls. Instead of using a mouse, users rely on the "tab" key to bring individual elements into focus.  Users will tab through an application one interactive element at a time until they reach the end of the document. Tabbing is the primary way to navigate between interactive elements using a keyboard, but  arrow keys may be used to switch between interaction options (such as the options provided by a group of radio buttons). </p>
       <br>
-      <p>Screen readers will read out the element currently in focus. However, there are sighted users who don’t require a screen reader but still use of keyboard controls. Without the pointer cursor provided by the mouse, they need a visual indication that an element is in focus and interactive. </p>
+      <p>Screen readers will read out the element currently in focus. However, there are sighted users who don’t require a screen reader but still use keyboard controls. Without the pointer cursor provided by the mouse, they need a visual indication that an element is in focus and interactive. </p>
       <br>
       <p>Browsers automatically provide a visual indication of focus. It is usually an outline of some sort. In Chrome this looks like:</p>
       <br>
@@ -517,7 +515,7 @@
     display: inline-block;
   }
 &lt;/style&gt;
-&lt;div class="my-btn" tabindex="0" role="button" aria-pressed="false" onclick="myFunction()" onKeyDown="myKeyFunction()"&gt;I'm a button!&lt;/div&gt; </code></pre>
+&lt;div class="my-btn" tabindex="0" role="button" aria-pressed="false" onclick="myFunction()" onkeydown="myKeyFunction()"&gt;I'm a button!&lt;/div&gt; </code></pre>
       <p><br></p>
       <samp class="preview">
         <style>
@@ -533,9 +531,9 @@
           <div class="my-btn" id="fake-button" tabindex="0" role="button" aria-pressed="false" onkeydown="myKeyFunction()" onclick="myFunction()">I'm a button!</div> 
       </samp>
       <br>
-      <p>Note four new attributes on the <code class='code-inline'>&lt;div&gt;</code> tag: <code class='code-inline'>tabindex</code> , <code class='code-inline'>role</code>, <code class='code-inline'>aria-pressed</code>, and <code class='code-inline'>onKeyDown</code>.  The <code class='code-inline'>tab index</code> attribute allows users to navigate to the button using the tab key and bring the button into focus.  The <code class='code-inline'>role="button"</code> attribute will allow screen-readers to describe this <code class='code-inline'>&lt;div&gt;</code> as a <code class='code-inline'>&lt;button&gt;</code> to users. </p>
+      <p>Note four new attributes on the <code class='code-inline'>&lt;div&gt;</code> tag: <code class='code-inline'>tabindex</code> , <code class='code-inline'>role</code>, <code class='code-inline'>aria-pressed</code>, and <code class='code-inline'>onkeydown</code>.  The <code class='code-inline'>tab index</code> attribute allows users to navigate to the button using the tab key and bring the button into focus.  The <code class='code-inline'>role="button"</code> attribute will allow screen readers to describe this <code class='code-inline'>&lt;div&gt;</code> as a <code class='code-inline'>&lt;button&gt;</code> to users. </p>
       <br>
-      <p>The last attribute is <code class='code-inline'>aria-pressed</code>. This attribute isn’t always necessary. If the button acts as a toggle, activating a certain state once pressed, this attribute is logical to include. <code class='code-inline'>aria-pressed="true"</code> means that the toggle is active. <code class='code-inline'>aria-pressed="false"</code> meanwhile, means that that the toggle is inactive. </p>
+      <p>The last attribute is <code class='code-inline'>aria-pressed</code>. This attribute isn’t always necessary. If the button acts as a toggle, activating a certain state once pressed, this attribute is logical to include. <code class='code-inline'>aria-pressed="true"</code> means that the toggle is active. <code class='code-inline'>aria-pressed="false"</code>, meanwhile, means that the toggle is inactive. </p>
       <br>
       <p>An alternative to <code class='code-inline'>aria-pressed</code> is <code class='code-inline'>aria-expanded</code>. If clicking the button opens a menu or dropdown, <code class='code-inline'>aria-expanded="true"</code> indicates that the menu/dropdown is open. On the other hand, if the button submits a value, neither of these tags are necessary, as there is no state change induced by the button press.</p>
       <br>
@@ -543,14 +541,14 @@
         <p><i><code class='code-inline'>aria-pressed</code> and <code class='code-inline'>aria-expanded</code> are Accessible Rich Internet Applications (ARIA) attributes. These attributes are used to mimic behavior already provided by many semantic HTML elements, as evidenced by their role in mimicking buttons here. There are many other ARIA attributes that allow developers to essentially "hack" new versions of semantic HTML elements. For explanations and tutorials on ARIA, see the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">Mozilla Web Docs on the subject</a>. It is still easier and more desirable, however, to simply use the semantic HTML elements as they were designed.</i></p>
       </blockquote>
       <br>
-      <p>What becomes more complicated is the fact that you must implement different functions for clicks and key presses on the button. Traditional <code class='code-inline'>&lt;button&gt;</code> tags have click and keyboard support pre-baked into their functionality. With these specially-configured "fake" buttons, you must build this functionality yourself. This likely means using Javascript to code what happens when either the space or enter keys are pressed. </p>
+      <p>What becomes more complicated is that you must implement different functions for clicks and key presses on the button. Traditional <code class='code-inline'>&lt;button&gt;</code> tags have click and keyboard support pre-baked into their functionality. With these specially-configured "fake" buttons, you must build this functionality yourself. This likely means using Javascript to code what happens when either the space or enter keys are pressed. </p>
       <br>
       <p>While a "fake" <code class='code-inline'>&lt;div&gt;</code> button is easier to style, it is much more difficult to make it properly interactive.  It is best to use <code class='code-inline'>&lt;button&gt;</code> tags whenever possible, overriding styles as needed and only using "fake" interactive elements when absolutely necessary. </p>
       <br>
       </section><section class="note-section"><h2 id="final-words">Final Words…</h2>
-      <p>The examples presented in this guide are only a sample of issues commonly encountered when building web pages in HTML and CSS. The general rule, however, is that a logically structured HTML document is the best way to ensure accessibility. Rely on semantic HTML elements with real text rather than CSS and meaningless <code class='code-inline'>&lt;div&gt;</code> elements. Always include alternative text for images, and consider caption tracks and flashing light warnings for multimedia. Do not sacrifice style and aesthetics, but do not use them to impede accessibility. </p>
+      <p>The examples presented in this guide are only a sample of issues commonly encountered when building web pages in HTML and CSS. The general rule is that a logically structured HTML document is the best way to ensure accessibility. Rely on semantic HTML elements with real text rather than CSS and meaningless <code class='code-inline'>&lt;div&gt;</code> elements. Always include alternative text for images, and consider caption tracks and flashing light warnings for multimedia. Do not sacrifice style and aesthetics, but do not use them to impede accessibility. </p>
       <br>
-      <p>Following these simple rules will allow you code accessible HTML in nearly all situations. Oftentimes, accessibility violations occur only because developers try to "hack" HTML structure to more easily achieve a particular design or function. <b>Don’t do this</b>. If the web design can’t fit into a typical HTML, it probably needs to be re-evaluated. </p><br><br>
+      <p>Following these simple rules will maintain HTML accessibility in nearly all situations. Oftentimes, accessibility violations occur only because developers try to "hack" HTML structure to more easily achieve a particular design or function. <b>Don’t do this</b>. If the web design can’t fit into a typical HTML, it probably needs to be re-evaluated. </p><br><br>
       </section>
     </div>
 

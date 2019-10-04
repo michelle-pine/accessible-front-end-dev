@@ -577,8 +577,8 @@ h1.secondary-title {
 
 button.open-menu {
   position: fixed;
-  left: 5px;
-  top: 10px;
+  left: 0px;
+  top: 0px;
   font-size: 1.5em;
   color: #d53369;
 }

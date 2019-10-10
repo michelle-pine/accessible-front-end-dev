@@ -72,7 +72,7 @@
       <br>
       <p>HTML is a tree of nested nodes—called tags—with semantically-significant tag names. If nodes are not properly labelled or grouped together, assistive technologies such as <b>screen readers</b> may struggle to present your site’s content in a meaningful way. A screen reader is an assistive technology that reads and describes the content displayed on a computer, phone, or other device. </p>
       <br>
-      <p>View the below snippet of HTML. The section HTML tag represents a section of a site, the <code class='code-inline'>&lt;h3&gt;</code> HTML tag represents a heading, and the <code class='code-inline'>&lt;p&gt;</code> tag represents a paragraph.  So if your site needed an "Introduction" heading and a paragraph of introductory text, you could represent it as the following:</p>
+      <p>View the below snippet of HTML. The <code class='code-inline'>&lt;section&gt;</code> HTML tag represents a section of a site, the <code class='code-inline'>&lt;h3&gt;</code> HTML tag represents a heading, and the <code class='code-inline'>&lt;p&gt;</code> tag represents a paragraph.  So if your site needed an "Introduction" heading and a paragraph of introductory text, you could represent it as the following:</p>
       <br>
       <code class='code-multiline'><pre>&lt;section class="intro-section"&gt;
   &lt;h1&gt;Introduction&lt;/h1&gt;
@@ -280,6 +280,7 @@
       <pre><code class='code-multiline'>&lt;img src="https://cdn.pixabay.com/photo/2019/09/24/06/54/dog-4500444_960_720.jpg" /&gt;</code></pre>
       <p><br></p>
       <img class="preview" src="https://cdn.pixabay.com/photo/2019/09/24/06/54/dog-4500444_960_720.jpg" />
+      <p><i>Open source image from <a href="https://pixabay.com/photos/dog-puppy-small-view-dog-look-4500444/">Pixabay</a></i></p>
       <br>
       <p>You may be tempted to place your image description in the <code class='code-inline'>&lt;img&gt;</code> tag, but this is not possible. Note the lack of <code class='code-inline'>&lt;/img&gt;</code> closing tag. The <code class='code-inline'>&lt;img&gt;</code> tag is self-closing because it cannot contain children elements. So where should you put your image description?</p>
       <br>
@@ -292,9 +293,9 @@
       <pre><code class='code-multiline'>&lt;img src="https://cdn.pixabay.com/photo/2019/09/24/06/54/dog-4500444_960_720.jpg" alt="A dark brown hound sits with its back to the camera, gazing sadly over its shoulder at the viewer. The hound is outside, sitting between a patch of tall grass and a dirt path." /&gt;</code></pre>
       <p><br></p>
       <img class="preview" src="https://cdn.pixabay.com/photo/2019/09/24/06/54/dog-4500444_960_720.jpg" alt="A dark brown hound sits with its back to the camera, gazing sadly over its shoulder at the viewer. The hound is outside, sitting between a patch of tall grass and a dirt path." />
+      <p><i>Open source image from <a href="https://pixabay.com/photos/dog-puppy-small-view-dog-look-4500444/">Pixabay</a></i></p>
       <br>
-      <br>
-      <p>Note that the description is much more specific than simply writing "dog." A picture is worth a thousand words, or so the saying goes. Do your best to describe as much of the image of as possible. </p>
+      <p>Note that the description is much more specific than simply writing "dog." A picture is worth a thousand words, or so the saying goes. Do your best to describe as much of the image of as possible. If the image is purely decorative (meaning that it adds absolutely no meaning to the content of the webpage), you may use an empty <code class='code-inline'>alt=""</code> attribute, which will hide the image's presence from screen readers. Without this attribute, screen readers will read the file name of the image, which is often long and nonsensical. Always consider very carefully whether an empty <code class='code-inline'>alt=""</code> attribute is the right option, as the image in question may be more significant than you initially anticipate</p>
       <br>
       <h3 id="accessible-icons"><strong>Accessible Icons </strong>- Icons Aren’t Always Universal</h3>
       <p>Iconography is a supremely useful way to cross language and literacy barriers. Certain symbols are easily recognizable and perhaps even culturally universal to sighted individuals. Using icons in web development can therefore help users quickly navigate or understand your website. </p>
@@ -311,7 +312,7 @@
       <p><br></p>
       <samp class="preview"><i class="fa fa-book"></i></samp>
       <br>
-      <p>The <code class='code-inline'>&lt;i&gt;</code> tag semantically represents italicized text, but it is rarely used for that purpose. FontAwesome usually relies on this tag to insert icons.  The <code class='code-inline'>:before</code> CSS pseudo-element  then visually appends the icon glyph within every <code class='code-inline'>&lt;i&gt;</code> tag of  format <code class='code-inline'>&lt;i class="fa fa-*"&gt;&lt;/i&gt;</code>.  </p>
+      <p>The <code class='code-inline'>&lt;i&gt;</code> tag semantically represents italicized text, but it is rarely used for that purpose in practice. FontAwesome usually relies on this tag to insert icons.  The <code class='code-inline'>:before</code> CSS pseudo-element  then visually appends the icon glyph within every <code class='code-inline'>&lt;i&gt;</code> tag of  format <code class='code-inline'>&lt;i class="fa fa-*"&gt;&lt;/i&gt;</code>.  </p>
       <br>
       <p>A book icon is clearly visible to the human eye. But because this icon is not an image with <code class='code-inline'>alt</code> text, screen readers have no way of detecting that the book icon is there. In fact, to screen readers, that <code class='code-inline'>&lt;i&gt;</code>  tag is completely empty and meaningless. </p>
       <br>
@@ -536,7 +537,7 @@
           <div class="my-btn" id="fake-button" tabindex="0" role="button" aria-pressed="false" onkeydown="myKeyFunction()" onclick="myFunction()">I'm a button!</div> 
       </samp>
       <br>
-      <p>Note four new attributes on the <code class='code-inline'>&lt;div&gt;</code> tag: <code class='code-inline'>tabindex</code> , <code class='code-inline'>role</code>, <code class='code-inline'>aria-pressed</code>, and <code class='code-inline'>onkeydown</code>.  The <code class='code-inline'>tab index</code> attribute allows users to navigate to the button using the tab key and bring the button into focus.  The <code class='code-inline'>role="button"</code> attribute will allow screen readers to describe this <code class='code-inline'>&lt;div&gt;</code> as a <code class='code-inline'>&lt;button&gt;</code> to users. </p>
+      <p>Note four new attributes on the <code class='code-inline'>&lt;div&gt;</code> tag: <code class='code-inline'>tabindex</code> , <code class='code-inline'>role</code>, <code class='code-inline'>aria-pressed</code>, and <code class='code-inline'>onkeydown</code>.  The <code class='code-inline'>tabindex</code> attribute allows users to navigate to the button using the tab key and bring the button into focus.  The <code class='code-inline'>role="button"</code> attribute will allow screen readers to describe this <code class='code-inline'>&lt;div&gt;</code> as a <code class='code-inline'>&lt;button&gt;</code> to users. </p>
       <br>
       <p>The last attribute is <code class='code-inline'>aria-pressed</code>. This attribute isn’t always necessary. If the button acts as a toggle, activating a certain state once pressed, this attribute is logical to include. <code class='code-inline'>aria-pressed="true"</code> means that the toggle is active. <code class='code-inline'>aria-pressed="false"</code>, meanwhile, means that the toggle is inactive. </p>
       <br>

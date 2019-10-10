@@ -17,6 +17,7 @@
         <nav class="menu">
             <button class="close" onclick="closeMenu()">&times;<span class="sr-only">Close Table of Contents</span></button>
           <h1>Accessible Front-End Development</h1>
+          <sub>by <a href="#about-author">Michelle Pine</a></sub>
           <ul class="table-of-contents">
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#presenting-info">Presenting Information</a><br>
@@ -37,6 +38,8 @@
               </ul>
             </li>
             <li><a href="#final-words">Final Words</a></li>
+            <li><a href="#about-author">About the Author</a></li>
+
 
 
             </ul>
@@ -56,8 +59,10 @@
       <br>
       <p><b>Accessible development</b> means that your webpage should be fully usable to people of every ability, disability, and socioeconomic background. It’s a necessary component of any and all applications that  interact directly with human beings.  </p>
       <br>
+      <p>In this guide, you'll learn basic tactics to achieve accessible HTML for your website. You'll also learn how to avoid common mistakes that violate accessibility standards.</p>
+      <br>
       </section><section class="note-section"><h2 id="presenting-info">Presenting Information</h2>
-      <h3 id="semantic-html">Semantic HTML</h3>
+      <h3 id="semantic-html"><strong>Semantic HTML </strong>- Meaningful Tags for Meaningful Websites</i></h3>
       <p>A web page may present its information in a way that visually makes sense, but the actual information in the HTML document might be fragmented and nonsensical. Think of this situation like the optical illusion below. </p>
       <br>
       <p><a href="https://www.moillusions.com/perspective-chair-optical-illusion/"><img alt="To the left, a wooden chair in an empty room. To the right, a chair that appears fragmented and disjointed." class="preview" src='index/b677ebe71610af5411a20f3239d2567b.jpg'></a></p>
@@ -99,7 +104,7 @@
       the association between the paragraph and the heading is broken. 
       Some assistive technologies may not interpret them as grouped together.<br>
       <br>
-      <h3 id="accessible-css">CSS Only Fools the Eyes</h3>
+      <h3 id="accessible-css"><strong>Accessible CSS </strong> - CSS Only Fools the Eyes</h3>
       Cascading Style Sheets (CSS) are an incredibly useful tools that allow us to style our HTML elements in appealing ways. It can, however, be abused in ways that mask poor site accessibility. Consider the following code example and preview: <br><br>
       <pre><code class='code-multiline'>&lt;style&gt;
   .intro-section {
@@ -176,7 +181,7 @@
         <p><i>A pseudo-element is an element that exists only from a visual standpoint on the page. It’s not actually inserted into the HTML document. The<code class='code-inline'>:before</code> selector, in particular, visually appends a child node before the actual HTML children of a particular element. The <code class='code-inline'>:after</code> selector does the same after the HTML children of a particular element.</i></p>
       </blockquote>
       <br>
-      <h3 id="aesthetics">Don’t Sacrifice Aesthetics</h3>
+      <h3 id="aesthetics"><strong>Maintaining Aesthetics</strong> - Don't Sacrifice Style</h3>
       <p>We could rectify the problems in our previous example by (1) explicitly stating what the values represent and (2) placing the dollar sign in the actual HTML:</p>
       <br>
       <pre><code class='code-multiline'>&lt;section class="item-price"&gt;
@@ -267,7 +272,7 @@
       <br>
       <p>If we are mindful of how we build our websites, we should never have to sacrifice aesthetics for accessibility, or vice versa. </p>
       <br>
-      <h3 id="accessible-images">How Do Screen Readers Read Images?</h3>
+      <h3 id="accessible-images"><strong>Accessible Images</strong> - Every Picture Is Worth Some Words</h3>
       <p>As we’ve already discussed, assistive technologies are unable to interpret visual content. And what could be more purely visual than an image?</p>
       <br>
       <p>Assistive technology developers are aware of the fundamental role that images play in conveying information. They have thus developed ways for screen readers to essentially "read" images. Of course, we have yet to develop a technology that can perfectly translate images into words. Screen readers can interpret images only when we’re willing to provide descriptions of them. Here’s how images are represented in HTML:</p>
@@ -291,7 +296,7 @@
       <br>
       <p>Note that the description is much more specific than simply writing "dog." A picture is worth a thousand words, or so the saying goes. Do your best to describe as much of the image of as possible. </p>
       <br>
-      <h3 id="accessible-icons">Icons Aren’t Always Universal</h3>
+      <h3 id="accessible-icons"><strong>Accessible Icons </strong>- Icons Aren’t Always Universal</h3>
       <p>Iconography is a supremely useful way to cross language and literacy barriers. Certain symbols are easily recognizable and perhaps even culturally universal to sighted individuals. Using icons in web development can therefore help users quickly navigate or understand your website. </p>
       <br>
       <p>But like images, icons are visual elements. There are accessibility considerations to make whenever you add an icon to your site. </p>
@@ -318,7 +323,7 @@
       <br>
       <p>The appearance is completely unchanged, but the meaning of the icon is now detectable to screen readers. </p>
       <br>
-      <h3 id="accessible-multimedia">Closed Captioning Provided By…</h3>
+      <h3 id="accessible-multimedia"><strong>Accessible Multimedia</strong> - Closed Captioning Provided By…</h3>
       <p>Abilities and disabilities are varied. Some users may not be able to hear content on your site. Other users may be sensitive to flashing lights in video and .gif files. Some users  may need a keyboard, rather than a mouse, to play audio and video. </p>
       <br>
       <p>If using audio and video, both the <code class='code-inline'>&lt;audio&gt;</code> and <code class='code-inline'>&lt;video&gt;</code> tags accept a <code class='code-inline'>track</code> attribute. The <code class='code-inline'>track</code> attribute specifies a subtitle track for the sound in the audio/video element. With subtitles, users who are hard of hearing can still understand and enjoy the content you are trying to share. </p>
@@ -336,7 +341,7 @@
       <p>If your video or .gif  contains flashing lights, add visual, audible, and textual warnings. These warnings should be placed or timed so that users are able to effectively navigate away from the content before the flashing lights begin. </p>
       <br>
       </section><section class="note-section"><h2 id="interactive-elements">Interactive Elements</h2>
-      <h3 id="accessible-forms">Forming Forms</h3>
+      <h3 id="accessible-forms"><strong>Accessible Forms</strong> - Form Formation Done Right</h3>
       <p>Many websites require users to input information. This information could be usernames, passwords, credit card information, addresses and more. A common way to input information are HTML <b>forms</b>.  Forms usually consist of an input where a user can type or click to indicate a value of some sort, and an accompanying label  to indicate the purpose of that form. A properly developed form can be easily interpreted by screen readers:</p>
       <br>
       <pre><code class='code-multiline'>&lt;form&gt;
@@ -409,7 +414,7 @@
       <br>
       <p>Using semantically meaningful HTML elements is the best way to ensure form accessibility. If you do not like the appearance of the fieldset, buttons, or labels, you can easily override the default styling with custom CSS. Using CSS to change the form appearance will not affect a screen reader’s ability to interpret the information. </p>
       <br>
-      <h3 id="keeping-focus">Keeping Focus</h3>
+      <h3 id="keeping-focus"><strong>Keeping Focus</strong> - Don't Erase the Outline</h3>
       <p>When you use a mouse to hover over a <a href=""">link</a> like this one, you may notice that your cursor changes into a little hand with a raised pointer finger. This should indicate to you that (1) the link is clickable and (2) your mouse is in the right position to execute a click on the element. Similarly, you can enter text into an input by clicking on the input and typing. </p>
       <br>
       <p>When you click on an interactive element such as a link, button, or input, you bring that element into <b>focus</b>. Focus indicates that you have selected a particular HTML element to interact with. Once clicked, the browser will continue focusing on that element until you select a new element to bring into focus. </p>
@@ -432,7 +437,7 @@
       <br>
       <p>You may change the color of the focus outline, but it is best to keep focus consistent across webpages. </p>
       <br>
-      <h3 id="accessible-buttons">To Button or Not to Button</h3>
+      <h3 id="accessible-buttons"><strong>Accessible Buttons</strong> - To Button or Not to Button</h3>
       <p><code class='code-inline'>&lt;button&gt;</code> and <code class='code-inline'>&lt;a&gt;</code>  tags, otherwise known as buttons and hyperlinks, are accessible without much effort. Screen readers are programmed to detect these elements as clickable, interactive elements. Simply ensure that the content between the opening and closing <code class='code-inline'>&lt;button&gt;</code> and <code class='code-inline'>&lt;a&gt;</code> tags is meaningful. For example, if your button is a heart-shaped "like" button, make sure there is explanatory text that describes the appearance and purpose of the heart icon.  The heart icon alone cannot be interpreted. </p>
       <br>
       <p>You may have noticed that browsers automatically apply certain styling conventions to semantically significant HTML elements. Buttons, for example, look like this by default in the Google Chrome Browser:</p>
@@ -545,10 +550,21 @@
       <br>
       <p>While a "fake" <code class='code-inline'>&lt;div&gt;</code> button is easier to style, it is much more difficult to make it properly interactive.  It is best to use <code class='code-inline'>&lt;button&gt;</code> tags whenever possible, overriding styles as needed and only using "fake" interactive elements when absolutely necessary. </p>
       <br>
-      </section><section class="note-section"><h2 id="final-words">Final Words…</h2>
+      </section><section class="note-section"><h2 id="final-words">Final Words</h2>
       <p>The examples presented in this guide are only a sample of issues commonly encountered when building web pages in HTML and CSS. The general rule is that a logically structured HTML document is the best way to ensure accessibility. Rely on semantic HTML elements with real text rather than CSS and meaningless <code class='code-inline'>&lt;div&gt;</code> elements. Always include alternative text for images, and consider caption tracks and flashing light warnings for multimedia. Do not sacrifice style and aesthetics, but do not use them to impede accessibility. </p>
       <br>
-      <p>Following these simple rules will maintain HTML accessibility in nearly all situations. Oftentimes, accessibility violations occur only because developers try to "hack" HTML structure to more easily achieve a particular design or function. <b>Don’t do this</b>. If the web design can’t fit into a typical HTML, it probably needs to be re-evaluated. </p><br><br>
+      <p>Following these simple rules will maintain HTML accessibility in nearly all situations. Oftentimes, accessibility violations occur only because developers try to "hack" HTML structure to more easily achieve a particular design or function. <b>Don’t do this</b>. If the web design can’t fit into a typical HTML, it probably needs to be re-evaluated. </p><br>
+      <p>If you wish to learn more about website accessibility, please consult the online resources provided by the <a href="https://www.w3.org/WAI/">Web Accessibility Initiative</a>, an organization devoted to ensuring accessibility across the web. You can also explore the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Mozilla Web Docs</a> on the subject, which are provided by the creators of major technologies such as the Mozilla Firefox browser.</p>
+      <br>
+    </section>
+    </section><section class="note-section"><h2 id="about-author">About the Author</h2>
+      <div class="about-author">
+        <div class="my-image">
+          <a href="https://michellepine.com"><img src="https://avatars0.githubusercontent.com/u/32271661?s=460&v=4" alt="An avatar image of Michelle Pine"/></a>
+        </div>
+        <p>Michelle Pine is a fourth year Computer Science & Design combined major at Northeastern University. Professional, she operates as a full-stack developer and designer with a particular interest in front-end development and client-facing technology. Her past experiences include working at Boston Children's Hospital as UI/UX Designer and Graphics Innovator, as well as working as a Software Engineering Co-op at BookBub. You can learn more about Michelle at <a href="https://michellepine.com/">michellepine.com</a>, <a href="https://www.linkedin.com/in/michelle-pine">LinkedIn</a>, or <a href="https://github.com/michelle-pine">Github.</a></p>
+      </div>
+      <br>
       </section>
     </div>
 

@@ -162,8 +162,13 @@ h1 {
   color: white;
   font-size: 1.5em;
   line-height: 1.2em;
+  font-weight: 700;
+}
+sub {
   margin-bottom: 20px;
-  font-weight: 500;
+  margin-top: 5px;
+  display: block;
+  color: white;
 }
 h2 {
   font-family: 'Nunito Sans', sans-serif;
@@ -171,7 +176,7 @@ h2 {
   font-size: 1.3em;
   line-height: 1em;
   margin-bottom: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 h3 {
   font-family: 'Nunito Sans', sans-serif;
@@ -180,6 +185,35 @@ h3 {
   line-height: 1em;
   margin-bottom: 15px;
   font-weight: 500;
+}
+section h3:not(:first-of-type) {
+  border-top: 1px solid #ddd;
+  padding-top: 30px;
+}
+
+.about-author {
+  display: flex;
+}
+
+.about-author .my-image {
+  width: 120px;
+  padding-right: 20px;
+}
+
+.about-author p {
+  min-width: 0;
+  width: 100%;
+
+}
+
+.my-image img {
+  width: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+h2 {
+  border-top: 1px solid #d53369;
 }
 p {
   margin-bottom: 15px;
